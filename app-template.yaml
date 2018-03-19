@@ -82,7 +82,10 @@ objects:
     selector:
       deploymentConfig: ${APPLICATION_NAME}
     strategy:
-      resources: {}
+      resources:
+        requests:
+          cpu: 100m
+          memory: 256Mi
       rollingParams:
         intervalSeconds: 1
         maxSurge: 25%
